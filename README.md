@@ -5,7 +5,17 @@ Projeto final de POO. Um RPG curto de turnos: o jogador cria um personagem, esco
 
 ## Como executar
 
-Precisa apenas do JDK (versao 11 ou mais nova). Na pasta do projeto:
+Precisa apenas do JDK (versao 11 ou mais nova). Confira com `java -version` e `javac -version`.
+
+Baixar o codigo:
+
+```bash
+git clone https://github.com/gabrieltakashi08/game_java.git
+cd game_java
+git checkout claude/relaxed-franklin-grmhy6
+```
+
+Compilar e rodar no Linux/Mac:
 
 ```bash
 javac -d bin $(find src -name "*.java")
@@ -15,7 +25,22 @@ javac -d bin $(find src -name "*.java")
 java -cp bin rpg.app.Main
 ```
 
-No Windows (PowerShell), compile com `javac -d bin (Get-ChildItem -Recurse src -Filter *.java).FullName`.
+No Windows (PowerShell), compile com:
+
+```bash
+javac -d bin (Get-ChildItem -Recurse src -Filter *.java).FullName
+```
+
+No Windows (Prompt de Comando / cmd):
+
+```bash
+dir /s /b src\*.java > fontes.txt
+javac -d bin @fontes.txt
+```
+
+Depois rode com `java -cp bin rpg.app.Main`. So precisa compilar de novo se mudar o codigo.
+
+Pela IDE (IntelliJ, VS Code, Eclipse): abra a pasta `game_java` e rode `src/rpg/app/Main.java`.
 
 ## Como jogar
 
